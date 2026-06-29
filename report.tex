@@ -30,6 +30,9 @@
 \newcommand{\SupervisorName}{С.\,В.~Теплоухов}
 \newcommand{\ReportCity}{Майкоп}
 \newcommand{\ReportYear}{2026}
+\newlength{\SignatureDateWidth}
+\settowidth{\SignatureDateWidth}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}}}
+\newcommand{\SignatureDateSlot}{«\underline{\hspace{0.7cm}}» \underline{\hspace{2cm}} \ReportYear{} г.}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -53,30 +56,33 @@
 
 \textsc{Отчет по практике}\\[5mm]
 
-{\LARGE Лабораторная работа №2}\\[3mm]
-{\Large Решение системы линейных алгебраических уравнений методом простой итерации}
-
-\vfill
-
-Вариант №1
-
-Точность вычислений: \(\varepsilon = 0.01\)
+{\LARGE Программная реализация численного метода}\\[3mm]
+\begin{minipage}{0.92\textwidth}
+\centering
+{\Large\textit{Решить систему линейных уравнений \(AX=B\) с точностью до \(0{,}01\) методом простой итерации}}
+\end{minipage}
 
 \StudentCourse{} курс, группа \StudentGroup
 
+\end{center}
 \vfill
 
-\begin{flushright}
-\begin{minipage}{0.45\textwidth}
+\hfill\begin{minipage}{0.5\textwidth}
 Выполнил:\\
-\underline{\hspace{2cm}} \StudentName\\[4mm]
+\underline{\hspace{\SignatureDateWidth}} \StudentName\\
+\SignatureDateSlot
+\end{minipage}%
+\bigskip
+
+\hfill\begin{minipage}{0.5\textwidth}
 Руководитель:\\
-\underline{\hspace{2cm}} \SupervisorName
-\end{minipage}
-\end{flushright}
+\underline{\hspace{\SignatureDateWidth}} \SupervisorName\\
+\SignatureDateSlot
+\end{minipage}%
 
 \vfill
 
+\begin{center}
 \ReportCity, \ReportYear{} г.
 \end{center}
 \end{titlepage}
