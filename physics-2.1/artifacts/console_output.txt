@@ -1,0 +1,31 @@
+Physics task 2.1: capacitor battery
+
+Input data:
+  C1 = C2 = C3 = C5 = 1.0 uF
+  C4 = 0.5 uF
+  U0 = 200.0 V
+
+--- Open switch ---
+  C12 = C1 * C2 / (C1 + C2) = 0.500000 uF
+  C34 = C3 * C4 / (C3 + C4) = 0.333333 uF
+  C_initial = C12 + C34 = 0.833333 uF
+  Q_initial = C_initial * U0 = 166.666667 uC
+  E_initial = C_initial * U0^2 / 2 = 0.016667 J
+
+--- Closed switch: node potentials ---
+  3.0 * Va - 1.0 * Vb = 1.0
+ -1.0 * Va + 2.5 * Vb = 1.0
+  Va = 0.538462 V
+  Vb = 0.615385 V
+  Q_left = 0.846154 uC at 1 V
+  C_final = 0.846154 uF
+
+--- Charge conservation after disconnecting the source ---
+  Q_final = Q_initial = 166.666667 uC
+  U_final = Q_initial / C_final = 196.969697 V
+
+--- Energy ---
+  E_final = Q^2 / (2 * C_final) = 0.016414 J
+  Delta E = E_final - E_initial = -0.000253 J
+
+Energy decreases by approximately 0.253 mJ.
